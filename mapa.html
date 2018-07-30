@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Ejemplo de mapa</title>
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css">
+		<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+	</head>
+	<body>
+		<h1>Ejemplo de mapa de Randolph</h1>
+		
+		<div id="divMap" class="map map-home" style="margin:12px 0 12px 0;height:400px;"></div>
+		<script>
+			var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+				osmAttrib = '&copy; <a href="http://google.com">Randolph</a> contributors',
+				osm = L.tileLayer(osmUrl, {maxZoom: 20, attribution: osmAttrib});
+			var map = L.map('divMap').setView([18.435583,-69.9629892], 7).addLayer(osm);
+			
+			L.marker([18.435583,-69.9629892])
+				.addTo(map)
+				.bindPopup('Soy Randolph el entrenador pokemon y aqui vivo');
+
+			 L.marker([18,-69])
+            .addTo(map)
+            .bindPopup('pikachu,	 y su edad es 18	 a&ntildeos');   L.marker([18,-69.154646464])
+            .addTo(map)
+            .bindPopup('pichu,	 y su edad es 17	 a&ntildeos'); 
+
+		</script>
+		<p>
+			Mapa realizado por Randolph
+		</p>
+  </body>
+</html>
